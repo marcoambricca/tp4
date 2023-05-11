@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>TP 04 - Index</h1>
+<div>
+    <h1><a href='@Url.Action("SelectIndumentaria")'>Elegir indumentaria</a></h1>
+    <ul>
+        @foreach (string equipo in ViewBag.EquiposIndumentaria.Keys)
+        {
+            <div class="div1">
+                <p>@equipo</p>
+                <img src="/img/camisetas/@ViewBag.EquiposIndumentaria[equipo].Camiseta">
+                <img src="/img/pantalones/@ViewBag.EquiposIndumentaria[equipo].Pantalon">
+                <img src="/img/medias/@ViewBag.EquiposIndumentaria[equipo].Medias">
+                <br>
+            </div>
+        }
+    </ul>
+</div>
